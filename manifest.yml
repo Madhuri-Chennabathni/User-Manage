@@ -1,0 +1,12 @@
+---
+memory: 1G
+instances: 1
+applications:
+- name: user-management
+  host: user-management-dev
+  path: target/userManagement-0.0.1-SNAPSHOT.jar
+  services:
+  - fortunes-service-registry
+  - fortunes-db
+  env:
+    CF_TARGET: https://api.run.pivotal.io
